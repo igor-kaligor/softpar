@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "8104cd32-2094-42e5-b5e9-b0af72fb1c5a",
+		"name": "SoftPar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20223633"
+	},
+	"item": [
+		{
+			"name": "getALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/tasks",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/task/9",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"task",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"test\",\n    \"init\":\"2022-11-7\",\n    \"end\":\"2022-11-8\",\n    \"description\":\"test a task\",\n    \"conclude\":true\n}"
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/task",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putTask",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"test\",\n    \"init\":\"2022-11-7\",\n    \"end\":\"2022-11-8\",\n    \"description\":\"edit a task\",\n    \"conclude\":true\n}"
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/task/7",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"task",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "concludeTask",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/task/8/false",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"task",
+						"8",
+						"false"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/task/9",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"task",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://127.0.0.1:8001",
+			"type": "string"
+		}
+	]
+}
